@@ -1,0 +1,47 @@
+[versions]
+activityCompose = "1.9.0"
+agp = "8.5.0"
+composeBom = "2024.02.00"
+coroutinesTest = "1.6.0"
+coreKtx = "1.13.1"
+coreTesting = "2.1.0"
+dagger = "2.51.1"
+espressoCore = "3.5.1"
+hilt = "1.2.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+kotlin = "1.9.0"
+lifecycleRuntimeKtx = "2.8.1"
+mockito = "4.3.1"
+navigationCompose = "2.7.7"
+
+[libraries]
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTesting" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "dagger" }
+dagger-hilt-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "dagger" }
+hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

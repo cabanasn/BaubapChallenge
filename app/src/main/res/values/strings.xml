@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baubap Challenge</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_successful">Login Successful!</string>
+    <string name="logged_in_successfully">%1$s logged in successfully.</string>
+    <string name="error">Error</string>
+    <string name="baubap_banner">Baubap Banner</string>
+</resources>
