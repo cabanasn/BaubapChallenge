@@ -12,8 +12,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,6 +35,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -93,8 +99,26 @@ fun LoginScreen() {
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
                 .focusRequester(focusRequester),
-            visualTransformation = PasswordVisualTransformation(),
+            visualTransformation = if (state.passwordVisible)
+                VisualTransformation.None else
+                    PasswordVisualTransformation(),
             isError = state.showPasswordEmptyError,
+            trailingIcon = {
+                val image = if (state.passwordVisible) {
+                    Icons.Default.Visibility
+                } else {
+                    Icons.Default.VisibilityOff
+                }
+                IconButton(onClick = {
+                    viewModel.updatePasswordVisible()
+                }) {
+                    Icon(imageVector = image,
+                        contentDescription = if (state.passwordVisible)
+                            stringResource(R.string.hide_password) else
+                                stringResource(R.string.show_password)
+                    )
+                }
+            },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Password,
                 imeAction = ImeAction.Done

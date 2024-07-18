@@ -84,6 +84,14 @@ class LoginViewModel @Inject constructor(
         }
     }
 
+    fun updatePasswordVisible() {
+        _loginState.update {
+            it.copy(
+                passwordVisible = !it.passwordVisible
+            )
+        }
+    }
+
     fun clearLoginResponse() {
         _loginState.update {
             it.copy(loginResponse = null)

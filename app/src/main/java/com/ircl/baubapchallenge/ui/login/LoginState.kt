@@ -5,6 +5,7 @@ import com.ircl.baubapchallenge.data.remote.LoginResponse
 data class LoginState(
     var username: String = "",
     var password: String = "",
+    var passwordVisible: Boolean = false,
     var showUsernameEmptyError: Boolean = false,
     var showPasswordEmptyError: Boolean = false,
     var isLoading: Boolean = false,

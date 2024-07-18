@@ -7,4 +7,6 @@
     <string name="logged_in_successfully">%1$s logged in successfully.</string>
     <string name="error">Error</string>
     <string name="baubap_banner">Baubap Banner</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
 </resources>
